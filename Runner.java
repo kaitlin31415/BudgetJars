@@ -7,15 +7,15 @@ public class Runner{
   public static void main(String[] args){
 	ArrayList<Jar> listOfJars = new ArrayList<Jar>();
     Scanner kb = new Scanner(System.in);
-	System.out.println("To Create a jar hit enter, otherwise type 'view' to see your current setup");
-	String input = kb.next();
-	if (input.equals("")){
-		System.out.println("What kind of jar would you like to create? A budget jar or savings jar? (Type b or s)");
-		String nextInput = kb.next();
-		if (nextInput.equals("b")){
+	System.out.println("To Create a jar enter 1, otherwise type 'view' to see your current setup");
+	int input = kb.nextInt();
+	if (input==1){
+		System.out.println("What kind of jar would you like to create? A budget jar or savings jar? (Type 1 or 0)");
+		int nextInput = kb.nextInt();
+		if (nextInput ==1 ){
 			
 			System.out.println("What would you like to call this jar?");
-			String name= kb.nextLine();
+			String name= kb.next();
 			
 			System.out.println("What is the maximum amount for this jar? i.e. what is the budget?");
 			double cap = kb.nextDouble();
@@ -31,6 +31,7 @@ public class Runner{
 			
 			
 		}
+		System.out.println(listOfJars);
 		
 	}else{
 		System.out.println(listOfJars);

@@ -5,38 +5,47 @@ public class Jar{
   private String name;
   private double value;
   private double cap;
+  private boolean depositable;
+  private boolean withdrawable;
+
 
   public Jar(){
     this.name  = "default";
     this.value = 0.0;
     this.cap = 1000000;
+	this.depositable = false;
+    this.withdrawable = false;
 
   }
   public Jar (String name, double value, double cap){
     this.name = name;
     setValue(value);
     setCap(cap);
-
+	this.depositable = false;
+    this.withdrawable = false;
   }
 
   public Jar (String name, double value){
     this.name = name;
     setValue(value);
     this.cap = 1000000;
-
+	this.depositable = false;
+    this.withdrawable = false;
   }
   public Jar (String name){
     this.name = name;
     this.value = 0;
     this.cap = 1000000;
-
+	this.depositable = false;
+    this.withdrawable = false;
   }
 
   public Jar(Jar j){
     this.name = j.getName();
     setValue(j.getValue());
     setCap(j.getCap());
-
+	this.depositable = false;
+    this.withdrawable = false;
   }
 
   public String getName(){

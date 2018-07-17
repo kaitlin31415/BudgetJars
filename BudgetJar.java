@@ -42,5 +42,9 @@ public class BudgetJar extends Jar{
   public String getCategory(){
 	  return this.category;
   }
+  
+  public String toString(){
+	return super.toString() + " Category: " + this.category; 
+  }
 
 }
