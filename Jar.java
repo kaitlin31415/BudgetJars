@@ -5,8 +5,8 @@ public class Jar{
   private String name;
   private double value;
   private double cap;
-  private boolean depositable;
-  private boolean withdrawable;
+  protected boolean depositable;
+  protected boolean withdrawable;
 
 
   public Jar(){
@@ -90,7 +90,58 @@ public class Jar{
 	  return "Name: " + this.name + " Amount of Money: " + this.value + " Maximum Amount: " + this.cap; 
 	  
   }
+  public boolean canDeposit(){
+    return this.depositable;
 
+  }
+  public boolean canWithdraw(){
+    return this.withdrawable;
+
+  }
+  
+  public void withdraw(double amt){
+	  if (this.withdrawable){
+		  if (this.value - amt >=0){
+			  this.value -= amt;
+		  } else{
+			  System.out.println("Not enough money in jar.");
+			  
+		  }
+	  }else{
+		System.out.println("Jar Cannot be withdrawn from"); 
+		  
+	  }
+  }
+  
+  public double deposit(double amt){
+	if (this.depositable){
+		double check = this.value + amt;
+		if (this.value + amt > this.cap){
+			this.value = this.cap; 
+			return check - this.cap;
+		}else{
+			this.value += amt;
+			return 0;
+		}
+	}
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
