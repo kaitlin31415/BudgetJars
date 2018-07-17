@@ -76,6 +76,11 @@ public class Jar{
     }
 
   }
+  
+  public String toString(){
+	  return "Name: " + this.name + " Amount of Money: " + this.value + " Maximum Amount: " + this.cap; 
+	  
+  }
 
 
 
