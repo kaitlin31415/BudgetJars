@@ -15,6 +15,12 @@ public class FluidJar extends Jar{
 
   }
 
+  public void deposit(double amt){
+    super.deposit(amt);
+    this.timesAccesed++;
+
+  }
+
 
 
 }
