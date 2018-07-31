@@ -13,7 +13,7 @@ public class Jar{
     this.name  = "default";
     this.value = 0.0;
     this.cap = 1000000;
-	this.depositable = false;
+	  this.depositable = false;
     this.withdrawable = false;
 
   }
